@@ -27,6 +27,10 @@ npm start
 
 ### Script tag
 
+
+- Put `<script src='https://unpkg.com/stencil-skycons@latest/dist/skycons.js'></script>` in the head of your index.html
+- Then you can use the component
+
 ### Node Modules
 - Run `npm install stencil-skycons --save`
 - Put a script tag similar to this `<script src='node_modules/stencil-skycons/dist/skycons.js></script>` in the head of your index.html
