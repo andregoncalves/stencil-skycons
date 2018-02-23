@@ -1,9 +1,9 @@
 {
   "name": "stencil-skycons",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A web component to use the weather icons Skycons",
   "main": "dist/skycons.js",
-  "types": "dist/types/components.d.ts",
+  "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "files": [
     "dist/"
@@ -18,7 +18,7 @@
     "test.watch": "jest --watch --no-cache"
   },
   "dependencies": {
-    "@stencil/core": "^0.6.4"
+    "@stencil/core": "latest"
   },
   "devDependencies": {
     "@stencil/dev-server": "latest",
@@ -30,7 +30,11 @@
     "type": "git",
     "url": "git+https://github.com/andregoncalves/stencil-skycons.git"
   },
-  "author": "Andre Goncalves",
+  "author": {
+    "name": "Andre Goncalves",
+    "email": "andre@andregoncalves.com",
+    "url": "https://andregoncalves.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/andregoncalves/stencil-skycons"

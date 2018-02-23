@@ -1,12 +1,10 @@
 exports.config = {
   namespace: 'skycons',
   generateDistribution: true,
-  bundles: [
-    { components: ['st-skycons'] }
-  ]
+  serviceWorker: false
 };
 
 exports.devServer = {
   root: 'www',
   watchGlob: '**/**'
-};
+}
