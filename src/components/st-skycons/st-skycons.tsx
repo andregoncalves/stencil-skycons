@@ -44,7 +44,7 @@ export class StSkycons {
   }
 
   componentWillLoad () {
-    this.skycons = new Skycons({'color': this.color })
+    this.skycons = new Skycons({'color': this.color, "resizeClear": true })
   }
 
   componentDidLoad () {
