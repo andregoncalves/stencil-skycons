@@ -38,7 +38,13 @@ var requestInterval, cancelInterval;
     requestInterval = setInterval;
     cancelInterval = clearInterval;
   }
+
+  requestInterval = false;
+  requestInterval ? true : false;
+  cancelInterval = false;
+  cancelInterval ? true : false;
 }());
+
 
 /* Catmull-rom spline stuffs. */
 /*
@@ -705,17 +711,34 @@ Skycons.prototype.play = function() {
   var self = this;
 
   this.pause();
-  this.interval = requestInterval(function() {
+
+
+  let r = function(now) {
+    let i;
+    for(i = self.list.length; i--; )
+      self.draw(self.list[i], now);
+
+    self.interval = setTimeout(_ => {
+      window.requestAnimationFrame(r)
+    }, 75);
+  }
+
+  self.interval = window.requestAnimationFrame(r);
+
+
+  /*this.interval = requestInterval(function() {
     var now = Date.now(),
         i;
 
     for(i = self.list.length; i--; )
       self.draw(self.list[i], now);
-  }, 1000 / 60);
+  }, 1000 / 60);*/
 };
 Skycons.prototype.pause = function() {
+
   if(this.interval) {
-    cancelInterval(this.interval);
+    window.clearTimeout(this.interval);
+    //cancelInterval(this.interval);
     this.interval = null;
   }
 };

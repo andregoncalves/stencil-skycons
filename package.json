@@ -1,6 +1,6 @@
 {
   "name": "stencil-skycons",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A web component to use the weather icons Skycons",
   "main": "dist/skycons.js",
   "types": "dist/types/index.d.ts",
